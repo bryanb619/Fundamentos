@@ -9,23 +9,33 @@ frases = [
 unwanted_chars = [".", ",", "!", "?"]
 
 
+# Função que encontra as palavras únicas
 def encontrar_palavras_unicas(frases_a_analisar):
-    my_set = {}
 
-    #frases_a_analisar = frases_a_analisar.lower().strip()
-    #frases_a_analisar.split()
+    #cria um conjunto vazio, se não fizermos isso, Python vai criar um dicionário
+    my_set = set() 
 
-    for frase in frases_a_analisar:
-        #frase = frase.replace(unwanted_chars, "")
-        if frase in frases_a_analisar:
-            frases_a_analisar.remove(frase)
-        else:
-            my_set.add(frase)
+    # junta todas as frases numa string e fazemos lowercase de tudo
+    my_sting = "".join(frases_a_analisar).lower() 
 
+    # para cada caracter indesejado, substitui por um espaço
+    for char in unwanted_chars:
+        my_sting = my_sting.replace(char, " ")
+
+    # divide a string e converte-a novamente numa lista de palavras
+    my_sting = my_sting.split()
+
+    # para cada palavra na lista, se a palavra aparecer apenas uma vez, adiciona-a ao conjunto
+    for word in my_sting:
+        # se o count for igual a 1, adiciona a palavra ao conjunto
+        if word.count(word) == 1:
+            # adiciona a palavra ao conjunto
+            my_set.add(word)
+
+    # retorna o conjunto
     return my_set
-           
     
-
+    
 
 palavras_unicas = encontrar_palavras_unicas(frases)
 
