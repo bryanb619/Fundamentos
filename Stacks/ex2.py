@@ -10,7 +10,7 @@ action_history_stack = deque()
 screens_list = ["main menu", "settings", "game settings", "key bindings"]
 
 
-def openWindow(screen):
+def open_window(screen):
     if screen in screens_list:
         # adiciona a janela à stack
         action_history_stack.append(screen)
@@ -48,7 +48,7 @@ def window_manager():
 
         # se o input for uma das janelas disponíveis na lista screens_list[], abre a janela
         if choice_input in screens_list:
-            openWindow(choice_input)
+            open_window(choice_input)
 
         # se o input for close, fecha a janela
         elif choice_input == "close":
@@ -62,7 +62,7 @@ def window_manager():
         # indica a janela atual
         if(action_history_stack):
             print(f"Current screen is {action_history_stack}")
-            
+
         # indica se voltarmos ao inicio ou se nenhum ecrã estiver aberto
         else:
             print("No screens open")
