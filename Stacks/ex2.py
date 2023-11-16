@@ -32,6 +32,18 @@ def close_current_window():
     
     # retorna mensagem se a stack estiver vazia
     return "No screens to close"
+
+
+def history_check():
+
+     # indica a janela atual
+        if(action_history_stack):
+            print(f"Current screen is {action_history_stack}")
+
+        # indica se voltarmos ao inicio ou se nenhum ecrã estiver aberto
+        else:
+            print("No screens open")
+
     
 
 
@@ -59,13 +71,10 @@ def window_manager():
             print("Thanks for using the program!")
             break
 
-        # indica a janela atual
-        if(action_history_stack):
-            print(f"Current screen is {action_history_stack}")
+        # apos executar funções, verifica o estado da stack( se está vazia ou não) para o utlizador esesencialmente o estado do historico
+        history_check()
 
-        # indica se voltarmos ao inicio ou se nenhum ecrã estiver aberto
-        else:
-            print("No screens open")
+       
     
 window_manager()
 
