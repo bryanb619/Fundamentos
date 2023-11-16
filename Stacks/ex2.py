@@ -5,51 +5,75 @@
 
 from collections import deque
 
-action_history = deque()
+action_history_stack = deque()
 
 screens_list = ["main menu", "settings", "game settings", "key bindings"]
 
 
-def openWindow(current_window):
-    action_history.append(current_window)
-    print(action_history)
+def openWindow(screen):
+    if screen in screens_list:
+        # adiciona a janela à stack
+        action_history_stack.append(screen)
+        # remove a janela da lista
+        screens_list.remove(screen)
+ 
 
-def CloseWindow():
-    action_history.pop()
-    print(action_history)
+def close_current_window():
 
+    # se a stack tiver elementos, ou seja, se a stack não estiver vazia 
+    if action_history_stack: 
 
+        # remove a janela da stack e adiciona-a à lista
+        closed_screen = action_history_stack.pop()
+        screens_list.append(closed_screen)
 
-while True:
-
-    print("""   
-            Enter option:
-          
-            1 => Close window
-            2 => Open window
-            3 => Exit                       """)
+        # retorna mensagem com a janela fechada
+        return "Closed",closed_screen
     
-    user_input = input("Enter option: ")
-
-    if user_input == "1":
-        CloseWindow()
-
-    elif user_input == "2":
-
-        print("Options are:", screens_list)
-
-        if(len(action_history) == 0):
-            print("Current window is:", "None")
-        else:
-            print("Current window is:", action_history[-1])
-
-        second_input = input("Enter window name: ")
-
-        if second_input in screens_list:
-            openWindow(second_input)
-        else:
-            print("Window not found")
-        #print("Current window is:", action_history[-1])
+    # retorna mensagem se a stack estiver vazia
+    return "No screens to close"
     
-    else:
-        print("Opção inválida")
+
+
+def window_manager():
+
+
+    while True:
+
+        print(f"Screens available are: {screens_list}")
+        print("Choose screen to move in or close to go back. Type exit leave: ")
+        
+        # pedir input ao utilizador e fazer lower case dessa string
+        choice_input = input("Enter option ").lower()
+
+        # se o input for uma das janelas disponíveis na lista screens_list[], abre a janela
+        if choice_input in screens_list:
+            openWindow(choice_input)
+
+        # se o input for close, fecha a janela
+        elif choice_input == "close":
+            print(close_current_window())
+
+        # Fecha o programa
+        elif choice_input == "exit":
+            print("Thanks for using the program!")
+            break
+
+        # indica a janela atual
+        if(action_history_stack):
+            print(f"Current screen is {action_history_stack}")
+            
+        # indica se voltarmos ao inicio ou se nenhum ecrã estiver aberto
+        else:
+            print("No screens open")
+    
+window_manager()
+
+
+
+
+    
+
+
+
+    
