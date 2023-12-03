@@ -1,7 +1,12 @@
+filepath = "D:\Projects\Exercises\FP\Aula9_Pratica_FicheirosJSON"
+
 myInput = input("type the filename without extension: ")
 
 
-file = open(myInput + ".txt", "rt")
+myInput = myInput.lower()
+myInput = filepath + "/" + myInput + ".txt"
+
+file = open( myInput, "rt")
 
 all_lines = file.readlines()
 

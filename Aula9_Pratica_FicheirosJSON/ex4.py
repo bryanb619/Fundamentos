@@ -1,16 +1,71 @@
 import json
 
-data = """It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, 
-it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, 
-it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, 
-we were all going direct to Heaven, we were all going direct the other way - in short, the period was so far like the present period, 
-that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only"""
+filepath = "D:\Projects\Exercises\FP\Aula9_Pratica_FicheirosJSON"
+myInput = input("type the filename without extension: ")
 
-file_name = "text_data"
+myInput = myInput.lower()
+myInput = filepath + "/" + myInput + ".txt"
 
-file = open(file_name +".json", "wt")
+wordDict= {}
 
-file_name = json.dumps(data)
-file.write(file_name)
+
+file = open( myInput, "rt")
+
+all_lines = file.readlines()
+
+file.close()
+
+
+
+"""
+    1. For loop to read all lines
+    2. Por linha em todas a linhas
+    3. fazer split = transformar em lista
+    4. Para cada elemento da lista em words
+    5. remover indesejados
+    6. se a extenão da palavra for maior que 7
+    7. e se não estiver no dicionário
+    8. adicionar ao dicionário
+    
+
+"""
+# 1
+for line in all_lines:
+    
+    # 2
+    for line in all_lines:
+        
+        # 3
+        words = line.split() 
+        
+        # 4
+        for word in words:
+            # 5
+            word = word.strip(";,!?- ").lower()
+            
+            # 6
+            if len(word) > 7:
+                
+                # 7
+                
+                if word not in wordDict:
+                    
+                    # 8
+                    
+                    wordDict[word] = len(word)
+                    
+# Exercício anteror ^
+# ----------------------------------
+
+json_path = "D:\Projects\Exercises\FP\Aula9_Pratica_FicheirosJSON"
+json_file = "text_data.json"
+
+json_path_total = json_path + "/" + json_file   
+
+file = open(json_path_total, "w")
+
+wordDict = json.dumps(wordDict)
+
+file.write(wordDict)
 
 file.close()
