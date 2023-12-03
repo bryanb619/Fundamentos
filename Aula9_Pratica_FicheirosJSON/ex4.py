@@ -57,15 +57,25 @@ for line in all_lines:
 # Exercício anteror ^
 # ----------------------------------
 
-json_path = "D:\Projects\Exercises\FP\Aula9_Pratica_FicheirosJSON"
-json_file = "text_data.json"
+""" 
+1. É passado o path do ficheiro e o nome do ficheiro json
+2. Aberto em mode (w)rite
+3. Dicionário convertido em json com o método dumps
+4. Escrito no ficheiro = overwrite nesse caso
+5. Ficheiro fechado
 
-json_path_total = json_path + "/" + json_file   
+"""
+# 1.
+json_path = "D:\Projects\Exercises\FP\Aula9_Pratica_FicheirosJSON/text_data.json"
+ 
+# 2.
+file = open(json_path, "w")
 
-file = open(json_path_total, "w")
-
+# 3.
 wordDict = json.dumps(wordDict)
 
+# 4.
 file.write(wordDict)
 
+# 5.
 file.close()
