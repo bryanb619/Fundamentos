@@ -10,7 +10,7 @@ import json
 
 """
 # 1.
-json_path = "D:\Projects\Exercises\FP\Aula9_Pratica_FicheirosJSON/text_data.json"
+json_path = "D:\\Projects\Exercises\FP\Aula9_Pratica_FicheirosJSON/text_data.json"
  
 # 2.
 file = open(json_path, "r")
@@ -24,4 +24,5 @@ data = json.loads(json_data)
 # 5.
 print(data)
 
-
+# 6.
+file.close()

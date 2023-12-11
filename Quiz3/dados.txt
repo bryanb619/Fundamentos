@@ -1,0 +1,3 @@
+Diogo Andrade;FP;20
+Joaquim Manuel;IC;10
+Gualter Gualterino;FP;14

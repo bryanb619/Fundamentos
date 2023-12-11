@@ -1,0 +1,2 @@
+Aelar;archer;5;13;17
+Lyra;mage;3;19;11
