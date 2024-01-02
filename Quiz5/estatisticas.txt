@@ -1,0 +1,4 @@
+Total de palavras: 20
+Total de caracteres: 0
+Numero total de linhas: 3
+Palavra mais longa: "dificuldade".

@@ -3,13 +3,10 @@ class Animal:
         print("Um animal faz algum som.")
         
         
-        
 class Cachorro(Animal):
     def falar(self):
-        # super().falar() chama o método falar da classe pai
+        # super().falar() chama o método falar da classswe pai
         print("O cachorro late.")
-        
-        
         
         
 class Gato(Animal):
