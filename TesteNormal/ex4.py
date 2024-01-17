@@ -26,10 +26,10 @@ def sum_pairs(some_list):
     # 1.
     n = len(some_list)
     
+    ret = [] # lista de retorno
+    
     # 2.1
     if n %2 == 0:
-        
-        ret = [] # lista de retorno
         
         #2.1.1
         for i in range(0, n, 2):
@@ -42,16 +42,14 @@ def sum_pairs(some_list):
     # 2.2
     else :
         
-        odd_ret = [] # lista de retorno ímpar
-        
         # 2.2.1
         for i in range(0, n -1, 2):
             # 2.2.2
-            odd_ret.append(some_list[i] + some_list[i+1])
+            ret.append(some_list[i] + some_list[i+1])
         # 2.2.3
-        odd_ret.append(some_list[-1])
+        ret.append(some_list[-1])
         
-        return odd_ret
+        return ret
     
         
 print("Lista Par:")
