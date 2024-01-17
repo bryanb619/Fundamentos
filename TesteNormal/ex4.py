@@ -4,7 +4,6 @@ número par de elementos, a função deve somar os pares possíveis.
 """
 
 
-
 """ Soma de elementos da Lista
 
     1. Obter o tamanho da lista
