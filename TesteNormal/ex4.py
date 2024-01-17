@@ -5,7 +5,6 @@ número par de elementos, a função deve somar os pares possíveis.
 
 
 
-
 """ Soma de elementos da Lista
 
     1. Obter o tamanho da lista
@@ -21,20 +20,19 @@ número par de elementos, a função deve somar os pares possíveis.
     -    2.2.2 Somar o elemento atual com o próximo elemento da lista   
     -    2.2.3 Acessa o ultimo elemento da lista e adiciona a lista de retorno (o que sobrou!)
     -    2.2.4 Retorna a lista de retorno
-        
 """
 def sum_pairs(some_list):
     
     # 1.
-    l = len(some_list)
+    n = len(some_list)
     
     # 2.1
-    if l %2 == 0:
+    if n %2 == 0:
         
         ret = [] # lista de retorno
         
         #2.1.1
-        for i in range(0, l, 2):
+        for i in range(0, n, 2):
             # 2.1.2
             ret.append(some_list[i] + some_list[i+1])
             
@@ -47,7 +45,7 @@ def sum_pairs(some_list):
         odd_ret = [] # lista de retorno ímpar
         
         # 2.2.1
-        for i in range(0, l -1, 2):
+        for i in range(0, n -1, 2):
             # 2.2.2
             odd_ret.append(some_list[i] + some_list[i+1])
         # 2.2.3
