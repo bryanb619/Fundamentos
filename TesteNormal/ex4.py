@@ -16,7 +16,7 @@ número par de elementos, a função deve somar os pares possíveis.
     -   2.1.2 Somar o elemento atual com o próximo elemento da lista
     -   2.1.3 Retorna a lista de retorno
         
-    2.2 Se o tamanho da lista for ímpar:
+    2.2 Caso não seja par:
     -    2.2.1 Iterar sobre a lista, começando em 0, parando em l-1 (porque devemos parar antes de chegar ao fim!) com passo de 2 unidades
     -    2.2.2 Somar o elemento atual com o próximo elemento da lista   
     -    2.2.3 Acessa o ultimo elemento da lista e adiciona a lista de retorno (o que sobrou!)
