@@ -49,11 +49,15 @@ def sum_pairs(some_list):
         # 2.2.1
         for i in range(0, l -1, 2):
             # 2.2.2
-            ret.append(some_list[i] + some_list[i+1])
+            odd_ret.append(some_list[i] + some_list[i+1])
         # 2.2.3
         odd_ret.append(some_list[-1])
         
         return odd_ret
+    
         
+print("Lista Par:")
+print(sum_pairs([1,2,3,4,5,6])) # [3, 7, 11] Retorna tal porque é par e somou de 2 em 2 os elementos
 
-print(sum_pairs([1,2,3,4,5,6]))
+print("Lista Ímpar:")
+print(sum_pairs([1,2,3,4,5,6,7])) # [3, 7, 11, 7] RETORNA O 7, PORQUE É O ÚLTIMO ELEMENTO QUE SOBROU!
