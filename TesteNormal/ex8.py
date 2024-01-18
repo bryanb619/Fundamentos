@@ -10,6 +10,8 @@ Pode usar a função is_leap_year criada na alínea anterior.
 """ Validação de mês
 
     1. separar a data em dia, mês e ano (usando o método split)
+    -   1.1 dia = date[0] -> posição 0 da lista date (dia)
+    -   1.2 month = date[1] -> posição 1 da lista date (mês)
     
     2. Verificar se o número de elementos da lista é diferente de 3
     
@@ -26,15 +28,20 @@ def is_month_valid(u_date):
     # 1.
     date = u_date.split("/")
     
+    # 1.1
+    day = date[0]
+    # 1.2
+    month = date[1]
+    
     # 2.
     if len(date) != 3:
         return "A data tem de ter o formato dd/mm/yy!"
     
     # 3.
-    elif date[1] in months:
+    elif month in months:
         
         # 4.
-        if int(date[0]) <= months[date[1]]:
+        if int(day) <= months[date[1]]:
             return "A data é válida!"
         
         # 5.
