@@ -23,8 +23,46 @@ def mul_all(some_list):
         return result
     
     else:
-        empty_list = []
-        return empty_list
+        return 0
   
-  
-print(mul_all([1,2,3,4,5]))
+#print(mul_all([1,2,3,4,5]))
+
+#------------------------------------------------------------------------------------------------------------#
+
+"""  Alternativa 
+
+    1. Verificar se lista é menor que 1
+    -   1.1 Caso sim, retornar int 0
+    
+    2. criar variável local com valor 1 (para não zerar multiplicações)
+    3. Usar for para aceder a elementos da lista
+    4. Fazer calculo (multiplicação ao quadrado do número)
+    5. retornar valor de result para a chamada de função!
+    
+ 
+"""
+def mul_all2(list):
+    
+    # 1.
+    if len(list) < 1:
+        # 1.1
+        return 0
+    # ------------------
+
+    # 2. 
+    result = 1
+    
+    # 3.
+    for num in list:
+        # 4.
+        result *= num** 2
+    # --------------------
+        
+    return result
+
+
+print(mul_all2([1,2,3,4,5]))
+
+        
+        
+
