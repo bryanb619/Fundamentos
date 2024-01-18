@@ -5,27 +5,41 @@ números. Se a lista estiver vazia, a função deve devolver zero
 
 """
 
-" Função que recebe uma lista de números e retorna a multiplicação do quadrado de todos os números "
+
+""" Função que recebe uma lista de números e retorna a multiplicação do quadrado de todos os números 
+
+    1. verifica se a lista tem mais de um elemento
+    
+    -   1.1. result começa em 1 para que o resultado não seja 0...
+    
+    2. iterar sobre a lista a procura de números
+    3. elevar o número ao quadrado e multiplicar por result
+    4. Retornar result para a chamada
+    
+    5. Caso lista seja vazia retornar zero...
+
+"""
 def mul_all(some_list):
     
-    # verifica se a lista tem mais de um elemento!
+    # 1.
     if len(some_list) >= 1:
         
-        # result começa em 1 para que o resultado não seja 0...
+        # 1.1.
         result = 1
         
-        # iterar sobre a lista a procura de números
+        # 2.
         for num in some_list:
             
-            # elevar o número ao quadrado e multiplicar por result
+            # 3.
             result *= num ** 2 #  Ou  "result = result * num ** 2"
             
         return result
     
+    # 5.
     else:
         return 0
   
-#print(mul_all([1,2,3,4,5]))
+print(mul_all([1,2,3,4,5]))
 
 #------------------------------------------------------------------------------------------------------------#
 
