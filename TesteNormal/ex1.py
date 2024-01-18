@@ -58,6 +58,7 @@ def mul_all2(list):
         result *= num** 2
     # --------------------
         
+    # 5.
     return result
 
 
