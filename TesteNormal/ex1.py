@@ -22,7 +22,7 @@ números. Se a lista estiver vazia, a função deve devolver zero
 def mul_all(some_list):
     
     # 1.
-    if len(some_list) >= 1:
+    if len(some_list) > 0:
         
         # 1.1.
         result = 1
