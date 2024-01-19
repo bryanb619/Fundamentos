@@ -77,7 +77,3 @@ def mul_all2(list):
 
 
 print(mul_all2([1,2,3,4,5]))
-
-        
-        
-
