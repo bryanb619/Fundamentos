@@ -31,7 +31,7 @@ def sum_pairs(some_list):
     if n %2 == 0:
         
         #2.1.1
-        for i in range(0, n, 2):
+        for i in range(0,n, 2):
             # 2.1.2
             ret.append(some_list[i] + some_list[i+1])
             
@@ -42,11 +42,11 @@ def sum_pairs(some_list):
     else :
         
         # 2.2.1
-        for i in range(0, n -1, 2):
+        for i in range(0,n -1, 2):
             # 2.2.2
             ret.append(some_list[i] + some_list[i+1])
         # 2.2.3
-        ret.append(some_list[-1])
+        #ret.append(some_list[-1])
         
         return ret
     
@@ -55,4 +55,37 @@ print("Lista Par:")
 print(sum_pairs([1,2,3,4,5,6])) # [3, 7, 11] Retorna tal porque é par e somou de 2 em 2 os elementos
 
 print("Lista Ímpar:")
-print(sum_pairs([1,2,3,4,5,6,7])) # [3, 7, 11, 7] RETORNA O 7, PORQUE É O ÚLTIMO ELEMENTO QUE SOBROU!
+print(sum_pairs([1,4,2,5,6])) # [3, 7, 11, 7] RETORNA O 7, PORQUE É O ÚLTIMO ELEMENTO QUE SOBROU!
+
+
+    
+print(""" 
+-------(Alternative)------------
+      """)
+
+
+def sum_pairs2(list):
+    
+    ret = []
+    
+    if len(list) % 2 == 0:
+        
+        for i in range(0,len(list),2):
+                ret.append(list[i] + list[i+1])
+        return ret
+    
+    else:
+        for i in range(0,len(list) -1,2):
+            ret.append(list[i] + list[i+1])
+        return ret
+
+
+print("Lista Par: 2")
+print(sum_pairs2([1,2,3,4,5,6]))
+
+
+print("Lista Ímpar: 2")
+print(sum_pairs2([1,4,2,5,6]))
+
+            
+         
