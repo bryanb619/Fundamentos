@@ -43,6 +43,9 @@ def count_words(some_string):
 
 
 print(count_words("This is a string that has a lot of words that have to be counted"))
+print("""
+--------------------------------
+ """)
     
     
 

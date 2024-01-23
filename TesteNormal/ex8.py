@@ -79,3 +79,7 @@ print(is_month_valid("29/1/2022")) # A data é válida!
 print(is_month_valid("3/9/2022")) # A data é válida!
 
 print(is_month_valid("3/24/2022")) # O mês 24 não é válido!
+
+print("""
+--------------------------------
+ """)

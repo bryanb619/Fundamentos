@@ -86,6 +86,8 @@ print(sum_pairs2([1,2,3,4,5,6]))
 
 print("Lista Ímpar: 2")
 print(sum_pairs2([1,4,2,5,6]))
-
+print("""
+--------------------------------
+ """)
             
          

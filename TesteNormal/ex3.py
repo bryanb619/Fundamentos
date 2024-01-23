@@ -168,6 +168,10 @@ print(sum_column2(grid , 2)) # deve retornar 23
 print("Soma de linha: 'Versão 2'")
 print(sum_row2(grid , 2))
 
+print("""
+--------------------------------
+ """)
+
 
 
 
