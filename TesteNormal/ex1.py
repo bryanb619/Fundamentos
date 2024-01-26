@@ -64,7 +64,7 @@ def mul_all2(list):
     # ------------------
 
     # 2. 
-    result = 1
+    #result = 1
     
     # 3.
     for num in list:

@@ -13,9 +13,18 @@ Um ano é bisexto se é divisível por 4, a não ser anos fim de século (1800, 
 def is_leap_year(year):
     
     # 1.
-    if year % 4 == 0 and year % 400 != 0 and year % 100 !=0:
-        return f"{year} :{True}"
+    if year % 4 == 0:
+        
+        if year % 100 ==0:
+        
+            if year % 400 ==0:
+                return f"{year} :{True}"
+            
+            else:
+                return f"{year} :{False}"
     
+        else:
+            return f"{year}: {True}"
     # 3.
     else:
         return f"{year} :{False}"
